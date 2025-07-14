@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Profile README Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.4.0/github-markdown-dark.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🚀 Profile README Generator</h1>
+      <p>Create stunning GitHub profile READMEs with AI-powered insights</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="input-section">
+      <div class="card">
+        <div class="form-group">
+          <label for="user">
+            <span class="label-text">GitHub Username</span>
+            <span class="label-hint">Enter your GitHub username to generate a professional README</span>
+          </label>
+          <div class="input-wrapper">
+            <span class="input-icon">👤</span>
+            <input id="user" placeholder="pranesh-2005," autocomplete="off" />
+          </div>
+        </div>
+
+        <button id="go" class="generate-btn">
+          <span class="btn-text">Generate README</span>
+          <span class="btn-icon">✨</span>
+        </button>
+      </div>
+    </div>
+
+    <section id="result" class="result-section" hidden>
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="raw">📝 Raw Markdown</button>
+        <button class="tab-btn" data-tab="preview">👀 Live Preview</button>
+      </div>
+
+      <div class="tab-content">
+        <div id="raw-tab" class="tab-pane active">
+          <div class="output-header">
+            <h3>Your README.md</h3>
+            <button id="copy" class="copy-btn">
+              <span class="copy-text">Copy to Clipboard</span>
+              <span class="copy-icon">📋</span>
+            </button>
+          </div>
+          <textarea id="output" readonly placeholder="Your generated README will appear here..."></textarea>
+        </div>
+
+        <div id="preview-tab" class="tab-pane">
+          <div class="output-header">
+            <h3>Live Preview</h3>
+            <button id="download" class="copy-btn">
+              <span class="copy-text">Download</span>
+              <span class="copy-icon">💾</span>
+            </button>
+          </div>
+          <div id="preview" class="markdown-body"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Made with ❤️ and Azure GPT-4.1 | <a href="https://github.com" target="_blank">View on GitHub</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
