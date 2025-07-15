@@ -338,7 +338,7 @@ Create a README that makes {user_context['display_name'] or user_context['userna
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt}
             ],
-            temperature=0.75,  # Slightly higher for more creativity
+            temperature=0.8,  # Slightly higher for more creativity
             max_tokens=10000,   # Increased for comprehensive output
             timeout=20
         )
