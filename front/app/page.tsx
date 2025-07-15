@@ -22,7 +22,7 @@ export default function ReadmeGenerator() {
   const [generationTime, setGenerationTime] = useState<number | null>(null)
   const [renderedHtml, setRenderedHtml] = useState("")
 
-  const api = "http://127.0.0.1:5000/generate"
+  const api = "https://profilereadmeback.onrender.com/generate"
 
   // Configure marked options for GitHub-style rendering
   useEffect(() => {
